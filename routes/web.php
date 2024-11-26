@@ -14,3 +14,16 @@ Route::prefix('produtos')->group(function () {
     Route::post('/',[ProductController::class, 'edit']);
     Route::post('/',[ProductController::class, 'delete']);
 });
+
+//Categorias
+Route::prefix('categorias')->group(function () {
+    Route::post('/',[ProductController::class, 'store']);
+    Route::get('/',[ProductController::class, 'index']);
+    Route::post('/',[ProductController::class, 'edit']);
+    Route::post('/',[ProductController::class, 'delete']);
+});
+
+//Analytics
+Route::prefix('produtos')->group(function () {
+    Route::post('/',[ProductController::class, 'index']);
+});
